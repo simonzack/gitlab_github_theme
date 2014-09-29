@@ -16,6 +16,10 @@
 
     /* issue first post */
 
+    .issue-box {
+        color: #333333;
+    }
+
     .issue-box .state {
         padding: 8px 15px;
     }
