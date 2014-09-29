@@ -1,0 +1,137 @@
+
+@-moz-document domain(gitlab.arch), domain(gitlab.com) {
+    /* colors from github */
+
+    /* issue first post */
+
+    .issue-box .state {
+       padding: 8px 15px;
+    }
+
+    .issue-box .creator {
+        line-height: 25px;
+    }
+
+    .issue-box .creator .author {
+        color: #555;
+        font-weight: bold;
+    }
+
+    .issue-box .creator .author:hover {
+        color: #555;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .issue-box .state-label {
+        border-radius: 3px;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 20px;
+        padding: 4px 8px;
+        text-align: center;
+    }
+
+    ul.notes .note {
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        padding: 0 0;
+    }
+
+    /* open issues first post */
+
+    .issue-box.issue-box-open {
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .issue-box.issue-box-open .state {
+        background-color: #f7f7f7;
+        border-color: #ddd;
+        border-bottom: 1px solid #eee;
+        color: #999;
+    }
+
+    .issue-box.issue-box-open .state-label {
+        background-color: #58baa3;
+        color: #fff;
+    }
+
+    /* closed issues first post */
+
+    .issue-box.issue-box-closed {
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .issue-box.issue-box-closed .state {
+        background-color: #f7f7f7;
+        border-color: #ddd;
+        border-bottom: 1px solid #eee;
+        color: #999;
+    }
+
+    .issue-box.issue-box-closed .state-label {
+        background-color: #bd2c00;
+        color: #fff;
+    }
+
+    /* issue comments */
+
+    ul.notes .discussion-header, ul.notes .note-header {
+        background-color: #f7f7f7;
+        height: 40px;
+        line-height: 23px;
+        padding: 6px 12px;
+    }
+
+    .discussion .discussion-actions, .discussion .note-actions, .note .discussion-actions, .note .note-actions {
+        display: inline;
+    }
+
+    .discussion .discussion-actions a, .discussion .note-actions a, .note .discussion-actions a, .note .note-actions a {
+        font-size: 0px;
+    }
+
+    .discussion .discussion-actions i, .discussion .note-actions i, .note .discussion-actions i, .note .note-actions i {
+        color: #bbb;
+    }
+
+    ul.notes .discussion-header .author, ul.notes .note-header .author {
+        font-size: 13px;
+        color: #555;
+    }
+
+    ul.notes .discussion-header .author:hover, ul.notes .note-header .author:hover {
+        font-size: 13px;
+        color: #555;
+        text-decoration: underline;
+    }
+
+    ul.notes .discussion-header .discussion-last-update, ul.notes .discussion-header .note-last-update, ul.notes .note-header .discussion-last-update, ul.notes .note-header .note-last-update {
+        color: #999;
+        content: normal;
+    }
+
+    ul.notes .discussion-header .avatar, ul.notes .note-header .avatar {
+        height: 16px !important;
+        width: 16px !important;
+        margin-right: 2px;
+    }
+
+    ul.notes .note .note-body {
+        padding: 15px 15px 5px;
+        margin-left: 0px;
+    }
+
+    ul.notes .note:last-child {
+       border-bottom: 1px solid #ddd;
+    }
+
+    /* edit boxes */
+
+    .note_text {
+        max-height: 500px;
+    }
+}
