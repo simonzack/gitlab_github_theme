@@ -124,7 +124,7 @@
     }
 
     .timeline .timeline-entry .timeline-entry-inner .timeline-content:after {
-        margin-left: 0px;
+        display: none;
     }
 
     ul.notes .note .note-header {
