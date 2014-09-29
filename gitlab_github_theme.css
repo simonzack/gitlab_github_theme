@@ -144,6 +144,7 @@
 
     .discussion .discussion-actions, .discussion .note-actions, .note .discussion-actions, .note .note-actions {
         display: inline;
+        margin-top: -3px;
     }
 
     .discussion .discussion-actions a, .discussion .note-actions a, .note .discussion-actions a, .note .note-actions a {
