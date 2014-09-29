@@ -105,7 +105,7 @@
         width: 16px;
         position: relative;
         z-index: 999;
-        margin: 9px 5px;
+        margin: 9px 5px 9px 10px;
     }
 
     .timeline .timeline-entry .timeline-entry-inner .timeline-content {
@@ -119,7 +119,7 @@
     }
 
     ul.notes .note .note-header {
-        padding: 8px 15px;
+        padding: 8px 10px;
         background-color: #f7f7f7;
     }
 
