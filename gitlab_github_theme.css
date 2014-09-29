@@ -79,11 +79,64 @@
 
     /* issue comments */
 
-    ul.notes .discussion-header, ul.notes .note-header {
+    .timeline:before {
+        display: none;
+    }
+
+    .timeline .timeline-entry {
+        margin-left: 0px;
+    }
+
+    .timeline .timeline-entry .timeline-entry-inner {
+        margin-left: 0px;
+    }
+
+    .timeline .timeline-entry .timeline-entry-inner .timeline-icon {
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px 0px;
+        height: 16px;
+        width: 16px;
+    }
+
+    .timeline .timeline-entry .timeline-entry-inner .timeline-content {
+        margin-left: 0px;
+        padding: 0px 0px;
+        background-color: white;
+    }
+
+    .timeline .timeline-entry .timeline-entry-inner .timeline-content:after {
+        margin-left: 0px;
+    }
+
+    ul.notes .note .note-header {
+        padding: 8px 15px;
         background-color: #f7f7f7;
-        height: 40px;
-        line-height: 23px;
-        padding: 6px 12px;
+    }
+
+    ul.notes .note .note-body {
+        padding: 15px 15px 10px;
+    }
+
+    ul.notes .note:last-child {
+       border-bottom: 1px solid #ddd;
+    }
+
+    ul.notes .discussion-header, ul.notes .note-header {
+        color: #999;
+    }
+
+    ul.notes .discussion-header .discussion-last-update:before, ul.notes .discussion-header .note-last-update:before, ul.notes .note-header .discussion-last-update:before, ul.notes .note-header .note-last-update:before {
+        display: none;
+    }
+
+    ul.notes .discussion-header .author, ul.notes .note-header .author {
+        font-size: 13px;
+        color: #555;
+    }
+
+    ul.notes .discussion-header .author:hover, ul.notes .note-header .author:hover {
+        font-size: 13px;
+        color: #555;
     }
 
     .discussion .discussion-actions, .discussion .note-actions, .note .discussion-actions, .note .note-actions {
@@ -96,37 +149,6 @@
 
     .discussion .discussion-actions i, .discussion .note-actions i, .note .discussion-actions i, .note .note-actions i {
         color: #bbb;
-    }
-
-    ul.notes .discussion-header .author, ul.notes .note-header .author {
-        font-size: 13px;
-        color: #555;
-    }
-
-    ul.notes .discussion-header .author:hover, ul.notes .note-header .author:hover {
-        font-size: 13px;
-        color: #555;
-        text-decoration: underline;
-    }
-
-    ul.notes .discussion-header .discussion-last-update, ul.notes .discussion-header .note-last-update, ul.notes .note-header .discussion-last-update, ul.notes .note-header .note-last-update {
-        color: #999;
-        content: normal;
-    }
-
-    ul.notes .discussion-header .avatar, ul.notes .note-header .avatar {
-        height: 16px !important;
-        width: 16px !important;
-        margin-right: 2px;
-    }
-
-    ul.notes .note .note-body {
-        padding: 15px 15px 5px;
-        margin-left: 0px;
-    }
-
-    ul.notes .note:last-child {
-       border-bottom: 1px solid #ddd;
     }
 
     /* edit boxes */
