@@ -17,7 +17,8 @@
     /* issue first post */
 
     .issue-box {
-        color: #333333;
+        color: #333;
+        background-color: inherit;
     }
 
     .issue-box .state {
@@ -25,6 +26,7 @@
     }
 
     .issue-box .creator {
+        padding: 0;
         line-height: 25px;
     }
 
