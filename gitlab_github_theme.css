@@ -177,4 +177,16 @@
     .note_text {
         max-height: 500px;
     }
+
+    /* markdown */
+
+    .wiki code, .note-text code {
+        color: #333;
+        background-color: rgba(0, 0, 0, 0.04);
+        border-radius: 3px;
+    }
+
+    .wiki ul, .note-text ul {
+        margin-bottom: 9px;
+    }
 }
