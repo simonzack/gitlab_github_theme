@@ -188,5 +188,22 @@
 
     .wiki ul, .note-text ul {
         margin-bottom: 9px;
+        padding-left: 2em;
+    }
+
+    .wiki ul ul, .note-text ul ul {
+        margin-bottom: 0px;
+    }
+
+    .wiki ul, .note-text ul {
+        list-style: disc;
+    }
+
+    .wiki ul ul, .note-text ul ul {
+        list-style: circle;
+    }
+
+    .wiki ul ul ul, .note-text ul ul ul {
+        list-style: square;
     }
 }
