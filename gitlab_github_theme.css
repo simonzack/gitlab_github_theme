@@ -186,8 +186,8 @@
         border-radius: 3px;
     }
 
-    .wiki ul, .note-text ul {
-        margin-bottom: 9px;
+    .wiki ul, .note-text ul !important {
+        margin: 0px 0px 9px 0px;
         padding-left: 2em;
     }
 
