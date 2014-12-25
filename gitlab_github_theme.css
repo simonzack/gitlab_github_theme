@@ -14,10 +14,16 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
+    /* issue header */
+
+    .back-link {
+        display: none;
+    }
+
     /* issue first post */
 
     .issue-box {
-        margin-top: 40px;
+        margin-top: 10px;
         color: #333;
         background-color: inherit;
         border: 1px solid #ddd;
@@ -33,7 +39,7 @@
     }
 
     .issue-box .state-label {
-        margin-top: -40px;
+        margin-top: -42px;
         padding: 4px 8px;
         font-weight: bold;
         line-height: 20px;
