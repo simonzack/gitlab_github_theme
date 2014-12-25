@@ -17,69 +17,94 @@
     /* issue first post */
 
     .issue-box {
+        margin-top: 40px;
         color: #333;
         background-color: inherit;
         border: 1px solid #ddd;
         border-radius: 3px;
     }
 
+    /* issue first post icon */
+
     .issue-box .state {
-        padding: 8px 15px;
         background-color: #f7f7f7 !important;
         border-bottom: 1px solid #eee !important;
         color: #999;
     }
 
     .issue-box .state-label {
-        border-radius: 3px;
-        display: inline-block;
+        margin-top: -40px;
+        padding: 4px 8px;
         font-weight: bold;
         line-height: 20px;
-        padding: 4px 8px;
+        border-radius: 3px;
     }
 
-    .issue-box .creator {
-        padding: 0;
-        line-height: 25px;
-    }
-
-    .issue-box .creator .author {
-        color: #555;
-        font-weight: bold;
-    }
-
-    .issue-box .creator .author:hover {
-        color: #555;
-        font-weight: bold;
-        text-decoration: underline;
-    }
-
-    /* open issues first post */
-
-    .issue-box.issue-box-open .state {
-        background-color: #f7f7f7;
-        border-color: #ddd;
-        border-bottom: 1px solid #eee;
-        color: #999;
+    .issue-box.issue-box-open .state-label:before {
+        font-family: FontAwesome;
+        content: "";
     }
 
     .issue-box.issue-box-open .state-label {
-        background-color: #58baa3;
+        background-color: #6cc644;
         color: #fff;
     }
 
-    /* closed issues first post */
-
-    .issue-box.issue-box-closed .state {
-        background-color: #f7f7f7;
-        border-color: #ddd;
-        border-bottom: 1px solid #eee;
-        color: #999;
+    .issue-box.issue-box-closed .state-label:before {
+        font-family: FontAwesome;
+        content: "";
     }
 
     .issue-box.issue-box-closed .state-label {
         background-color: #bd2c00;
         color: #fff;
+    }
+
+    /* issue first post author */
+
+    .issue-box .creator {
+        float: left;
+        padding: 0;
+        font-size: 0px;
+    }
+
+    .issue-box .creator .author_link {
+        color: #555;
+        font-size: 13px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .issue-box .creator .author_link:hover {
+        text-decoration: underline;
+    }
+
+    .issue-box .creator .avatar {
+        border-radius: 4px;
+        height: 18px !important;
+        width: 18px !important;
+        margin: 9px 5px 9px 10px;
+    }
+
+    .issue-box .creator .note_created_ago, .issue-box .creator small {
+        padding-left: 5px;
+        font-size: 13px;
+    }
+
+    .issue-box .creator small time {
+        margin-right: -3px;
+    }
+
+    /* issue first post links */
+
+    .issue-box .cross-project-ref {
+        line-height: 15px;
+        float: right;
+    }
+
+    .issue-box .cross-project-ref .fa, .issue-box .cross-project-ref .tooltip {
+        /* hide as not clickable */
+        display: none !important;
     }
 
     /* issue comments */
@@ -120,7 +145,7 @@
         border: 1px solid #ddd;
         border-radius: 3px;
         margin-bottom: 15px;
-        padding: 0 0;
+        padding: 0px 0px;
     }
 
     ul.notes .note .note-header {
@@ -136,34 +161,42 @@
        border-bottom: 1px solid #ddd;
     }
 
-    ul.notes .discussion-header, ul.notes .note-header {
+    ul.notes .note-header {
         color: #999;
     }
 
-    ul.notes .discussion-header .discussion-last-update:before, ul.notes .discussion-header .note-last-update:before, ul.notes .note-header .discussion-last-update:before, ul.notes .note-header .note-last-update:before {
+    ul.notes .note-header .author {
+        font-size: 13px;
+        color: #555;
+    }
+
+    ul.notes .note-header .author:hover {
+        color: #555;
+        text-decoration: underline;
+    }
+
+    ul.notes .note-last-update small {
+        font-size: 13px;
+    }
+
+    ul.notes .note-last-update small time {
+        margin-right: -3px;
+    }
+
+    ul.notes .note-header .note-last-update:before {
         display: none;
     }
 
-    ul.notes .discussion-header .author, ul.notes .note-header .author {
-        font-size: 13px;
-        color: #555;
-    }
-
-    ul.notes .discussion-header .author:hover, ul.notes .note-header .author:hover {
-        font-size: 13px;
-        color: #555;
-    }
-
-    .discussion .discussion-actions, .discussion .note-actions, .note .discussion-actions, .note .note-actions {
+    .note .note-actions {
         display: inline;
         margin-top: -3px;
     }
 
-    .discussion .discussion-actions a, .discussion .note-actions a, .note .discussion-actions a, .note .note-actions a {
+    .note .note-actions a {
         font-size: 0px;
     }
 
-    .discussion .discussion-actions i, .discussion .note-actions i, .note .discussion-actions i, .note .note-actions i {
+    .note .note-actions i {
         color: #bbb;
     }
 
