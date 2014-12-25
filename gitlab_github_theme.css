@@ -19,10 +19,23 @@
     .issue-box {
         color: #333;
         background-color: inherit;
+        border: 1px solid #ddd;
+        border-radius: 3px;
     }
 
     .issue-box .state {
         padding: 8px 15px;
+        background-color: #f7f7f7 !important;
+        border-bottom: 1px solid #eee !important;
+        color: #999;
+    }
+
+    .issue-box .state-label {
+        border-radius: 3px;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 20px;
+        padding: 4px 8px;
     }
 
     .issue-box .creator {
@@ -41,27 +54,7 @@
         text-decoration: underline;
     }
 
-    .issue-box .state-label {
-        border-radius: 3px;
-        display: inline-block;
-        font-weight: bold;
-        line-height: 20px;
-        padding: 4px 8px;
-    }
-
-    ul.notes .note {
-        border: 1px solid #ddd;
-        border-radius: 3px;
-        margin-bottom: 15px;
-        padding: 0 0;
-    }
-
     /* open issues first post */
-
-    .issue-box.issue-box-open {
-        border: 1px solid #ddd;
-        border-radius: 3px;
-    }
 
     .issue-box.issue-box-open .state {
         background-color: #f7f7f7;
@@ -76,11 +69,6 @@
     }
 
     /* closed issues first post */
-
-    .issue-box.issue-box-closed {
-        border: 1px solid #ddd;
-        border-radius: 3px;
-    }
 
     .issue-box.issue-box-closed .state {
         background-color: #f7f7f7;
@@ -126,6 +114,13 @@
 
     .timeline .timeline-entry .timeline-entry-inner .timeline-content:after {
         display: none;
+    }
+
+    ul.notes .note {
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        padding: 0 0;
     }
 
     ul.notes .note .note-header {
@@ -186,7 +181,7 @@
         border-radius: 3px;
     }
 
-    .wiki ul, .note-text ul !important {
+    .wiki ul , .note-text ul  {
         margin: 0px 0px 9px 0px;
         padding-left: 2em;
     }
