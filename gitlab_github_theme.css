@@ -209,6 +209,10 @@
         border-radius: 3px;
     }
 
+    .wiki .task-list-item {
+        margin-left: -1em;
+    }
+
     .wiki ul , .note-text ul  {
         margin: 0px 0px 9px 0px !important;
         padding-left: 2em;
