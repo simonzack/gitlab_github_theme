@@ -30,8 +30,6 @@
         border-radius: 3px;
     }
 
-    /* issue first post icon */
-
     .issue-box .state {
         background-color: #f7f7f7 !important;
         border-bottom: 1px solid #eee !important;
@@ -60,8 +58,6 @@
         background-color: #bd2c00;
         color: #fff;
     }
-
-    /* issue first post author */
 
     .issue-box .creator {
         float: left;
@@ -95,8 +91,6 @@
     .issue-box .creator small time {
         margin-right: -3px;
     }
-
-    /* issue first post links */
 
     .issue-box .cross-project-ref {
         line-height: 15px;
