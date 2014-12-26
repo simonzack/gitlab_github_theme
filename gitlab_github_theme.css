@@ -46,7 +46,7 @@
         border-radius: 3px;
     }
 
-    .issue-box.issue-box-open .state-label:before {
+    .issue-box .state-label:before {
         font-family: FontAwesome;
         content: "";
     }
@@ -54,11 +54,6 @@
     .issue-box.issue-box-open .state-label {
         background-color: #6cc644;
         color: #fff;
-    }
-
-    .issue-box.issue-box-closed .state-label:before {
-        font-family: FontAwesome;
-        content: "";
     }
 
     .issue-box.issue-box-closed .state-label {
