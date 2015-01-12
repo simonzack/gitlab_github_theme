@@ -20,6 +20,14 @@
         display: none;
     }
 
+    .merge-request .page-title {
+        margin-bottom: 51px;
+    }
+
+    .merge-request .votes-holder {
+        margin-top: -41px;
+    }
+
     /* issue first post */
 
     .issue-box {
