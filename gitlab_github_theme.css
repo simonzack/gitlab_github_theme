@@ -232,7 +232,12 @@
         margin-left: -1em;
     }
 
-    .wiki ul , .note-text ul  {
+    .wiki .task-list-item input[type="checkbox"] {
+        margin-bottom: 2.5px;
+        vertical-align: middle;
+    }
+
+    .wiki ul, .note-text ul  {
         margin: 0px 0px 9px 0px !important;
         padding-left: 2em;
     }
