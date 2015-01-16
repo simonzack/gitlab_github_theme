@@ -14,6 +14,32 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
+    /* issues right column */
+
+    .page-title .pull-right {
+        position: fixed;
+        top: 110px;
+        left: 80%;
+    }
+
+    .row > .col-md-3 {
+        position: fixed;
+        top: 170px;
+        left: 80%;
+        padding-left: 0px;
+        width: 20%;
+    }
+
+    .participants {
+        position: fixed;
+        top: 450px;
+        left: 80%;
+    }
+
+    .row > .col-md-3 > h6 {
+       margin-top: 70px;
+    }
+
     /* issue first post */
 
     .content .clearfix {
@@ -73,7 +99,7 @@
     .page-title small {font-size: 11px;}
     .page-title small:before {content: "\00a0";}
 
-    /* issue first post timeline */
+    /* issue first post wedge */
 
     .description:before, .description > .wiki:before {
         content: "";
@@ -96,32 +122,6 @@
         margin-left: -31px;
         border-width: 8px 8px 8px 8px;
         border-color: transparent #f7f7f7 transparent transparent;
-    }
-
-    /* right column */
-
-    .page-title .pull-right {
-        position: fixed;
-        top: 110px;
-        left: 80%;
-    }
-
-    .row > .col-md-3 {
-        position: fixed;
-        top: 170px;
-        left: 80%;
-        padding-left: 0px;
-        width: 20%;
-    }
-
-    .participants {
-        position: fixed;
-        top: 450px;
-        left: 80%;
-    }
-
-    .row > .col-md-3 > h6 {
-       margin-top: 70px;
     }
 
     /* issue comments timeline */
