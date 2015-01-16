@@ -40,6 +40,22 @@
        margin-top: 70px;
     }
 
+    /* open/close */
+
+    .issue-box {
+        border-radius: 3px;
+        padding: 4px 8px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .issue-box:before {font-family: FontAwesome;}
+    .issue-box.issue-box-open:before {content: "\f06a";}
+    .issue-box.issue-box-closed:before {content: "\f058";}
+    .issue-box.issue-box-open {background-color: #6cc644;}
+    .issue-box.issue-box-closed {background-color: #bd2c00;}
+
     /* issue first post */
 
     .content .clearfix {
