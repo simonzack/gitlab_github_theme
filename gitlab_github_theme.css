@@ -32,12 +32,18 @@
 
     .participants {
         position: fixed;
-        top: 450px;
+        top: 440px;
         left: 80%;
     }
 
     .row > .col-md-3 > h6 {
-       margin-top: 70px;
+        position: fixed;
+        top: 475px;
+    }
+
+    .row > .col-md-3 > .issue-show-labels {
+        position: fixed;
+        top: 510px;
     }
 
     /* open/close */
