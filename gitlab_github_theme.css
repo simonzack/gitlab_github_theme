@@ -30,7 +30,7 @@
     .issue-title + div {order: 3;}
     .row {order: 4;}
 
-    .description {
+    div.description {
         margin-top: 10px;
         margin-bottom: 15px;
         margin-left: 70px;
@@ -38,7 +38,7 @@
         padding: 51px 15px 10px 15px;
         border-radius: 3px;
         border: 1px solid #ddd;
-        background: linear-gradient(#f7f7f7, #f7f7f7 36px, #fff 36px, #fff 36px);
+        background: linear-gradient(#f7f7f7, #f7f7f7 36px, #fff 36px, #fff);
     }
 
     .page-title .creator {
@@ -127,9 +127,13 @@
     /* issue comments timeline */
 
     .timeline:before {
-        margin-top: -20px;
+        margin-top: -15px;
         margin-left: 90px;
         width: 2px;
+    }
+
+    .timeline .timeline-entry {
+        margin-top: 0px;
     }
 
     .timeline .system-note .timeline-entry-inner .timeline-icon {
@@ -219,6 +223,10 @@
     }
 
     /* edit boxes */
+
+    .issue-form-holder label.control-label {
+        width: 120px;
+    }
 
     .new_note {
         margin-top: 15px;
