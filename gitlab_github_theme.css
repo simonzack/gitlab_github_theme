@@ -38,17 +38,17 @@
 
     body[data-project-id]  .row > .col-md-3 > h6 {
         position: fixed;
-        top: 475px;
+        top: 540px;
     }
 
     body[data-project-id]  .row > .col-md-3 > .issue-show-labels {
         position: fixed;
-        top: 510px;
+        top: 580px;
     }
 
     .participants {
         position: fixed;
-        top: 440px;
+        top: 510px;
         left: 80%;
     }
 
