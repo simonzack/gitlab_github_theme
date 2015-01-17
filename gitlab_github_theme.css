@@ -16,13 +16,13 @@
 
     /* issues right column */
 
-    .page-title .pull-right {
+    body[data-project-id] .page-title > .pull-right {
         position: fixed;
         top: 110px;
         left: 80%;
     }
 
-    .row > .col-md-3 {
+    body[data-project-id]  .row > .col-md-3 {
         position: fixed;
         top: 170px;
         left: 80%;
@@ -30,20 +30,20 @@
         width: 20%;
     }
 
-    .participants {
-        position: fixed;
-        top: 440px;
-        left: 80%;
-    }
-
-    .row > .col-md-3 > h6 {
+    body[data-project-id]  .row > .col-md-3 > h6 {
         position: fixed;
         top: 475px;
     }
 
-    .row > .col-md-3 > .issue-show-labels {
+    body[data-project-id]  .row > .col-md-3 > .issue-show-labels {
         position: fixed;
         top: 510px;
+    }
+
+    .participants {
+        position: fixed;
+        top: 440px;
+        left: 80%;
     }
 
     /* open/close */
