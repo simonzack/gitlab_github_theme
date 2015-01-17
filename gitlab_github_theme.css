@@ -22,6 +22,12 @@
         left: 80%;
     }
 
+    body[data-project-id] .append-bottom-20 .pull-right {
+        position: fixed;
+        top: 165px;
+        right: 15px;
+    }
+
     body[data-project-id]  .row > .col-md-3 {
         position: fixed;
         top: 170px;
@@ -64,19 +70,31 @@
 
     /* issue first post */
 
-    .content .clearfix {
+    .content .clearfix, .merge-request {
         display: flex;
         flex-direction: column;
     }
 
-    .content .clearfix hr {
+    .content .clearfix > hr, .merge-request > hr {
         display: none;
     }
 
-    .page-title {order: 2;}
-    .issue-title {order: 1;}
-    .issue-title + div {order: 3;}
-    .row {order: 4;}
+    .content .clearfix > .issue-title {order: 1;}
+    .content .clearfix > .page-title {order: 2;}
+    .content .clearfix > .issue-title + div {order: 3;}
+    .content .clearfix > .row {order: 4;}
+
+    .merge-request > .issue-title {order: 1;}
+    .merge-request > .page-title {order: 2;}
+    .merge-request > .append-bottom-20 {order: 3;}
+    .merge-request > .mr-state-widget {order: 4;}
+    .merge-request > .merge-request-tabs {order: 5;}
+    .merge-request > .issue-title + div {order: 6;}
+    .merge-request > .tab-content {order: 7;}
+
+    .merge-request > .merge-request-tabs, .merge-request > .mr-state-widget {
+        margin-right: calc(25% + 8px);
+    }
 
     div.description {
         margin-top: 10px;
@@ -89,9 +107,16 @@
         background: linear-gradient(#f7f7f7, #f7f7f7 36px, #fff 36px, #fff);
     }
 
+    .content .clearfix > .page-title .creator {
+        top: 170px;
+    }
+
+    .merge-request > .page-title .creator {
+        top: 420px;
+    }
+
     .page-title .creator {
         position: absolute;
-        top: 170px;
         left: 350px;
         font-size: 0px;
     }
