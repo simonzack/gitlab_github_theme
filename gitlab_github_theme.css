@@ -268,13 +268,13 @@
         border-radius: 3px;
     }
 
-    .highlighted-data pre {
+    .highlight {
         padding: 16px;
-        background-color: #F7F7F7;
+        background-color: #f7f7f7;
         border-radius: 3px;
     }
 
-    .highlighted-data pre code {
+    .highlighted-data pre, .highlighted-data pre code {
         background-color: inherit !important;
     }
 
