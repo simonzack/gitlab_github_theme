@@ -70,19 +70,19 @@
 
     /* issue first post */
 
-    .content .clearfix, .merge-request {
+    body[data-page="projects:issues:show"] .content .clearfix, .merge-request {
         display: flex;
         flex-direction: column;
     }
 
-    .content .clearfix > hr, .merge-request > hr {
+    body[data-page="projects:issues:show"] .content .clearfix > hr, .merge-request > hr {
         display: none;
     }
 
-    .content .clearfix > .issue-title {order: 1;}
-    .content .clearfix > .page-title {order: 2;}
-    .content .clearfix > .issue-title + div {order: 3;}
-    .content .clearfix > .row {order: 4;}
+    body[data-page="projects:issues:show"] .content .clearfix > .issue-title {order: 1;}
+    body[data-page="projects:issues:show"] .content .clearfix > .page-title {order: 2;}
+    body[data-page="projects:issues:show"] .content .clearfix > .issue-title + div {order: 3;}
+    body[data-page="projects:issues:show"] .content .clearfix > .row {order: 4;}
 
     .merge-request > .issue-title {order: 1;}
     .merge-request > .page-title {order: 2;}
