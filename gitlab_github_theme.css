@@ -77,8 +77,7 @@
         margin-right: calc(25% + 8px);
     }
 
-    div.description {
-        margin-top: 10px;
+    .description {
         margin-bottom: 15px;
         margin-left: 70px;
         margin-right: calc(25% + 8px);
@@ -88,26 +87,31 @@
         background: linear-gradient(#f7f7f7, #f7f7f7 36px, #fff 36px, #fff);
     }
 
-    .issue .page-title .creator {
-        top: 168px;
-    }
-
-    .merge-request .page-title .creator {
-        top: 375px;
+    .page-title {
+        height: 45px;
     }
 
     .page-title .creator {
-        position: absolute;
-        left: 330px;
+        position: relative;
+        display: block;
+        left: 31px;
         font-size: 0px;
     }
 
+    .issue .page-title .creator {
+        top: 23px;
+    }
+
+    .merge-request .page-title .creator {
+        top: 140px;
+    }
+
     .page-title .creator .avatar {
-        position: absolute;
+        position: relative;
         width: 42px !important;
         height: 42px !important;
-        left: -74px;
-        top: -12px;
+        left: -26px;
+        top: 4px;
     }
 
     .page-title .creator .author_link {
