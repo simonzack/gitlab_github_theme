@@ -89,7 +89,7 @@
     }
 
     .issue .page-title .creator {
-        top: 170px;
+        top: 168px;
     }
 
     .merge-request .page-title .creator {
@@ -183,6 +183,7 @@
     }
 
     .timeline .timeline-entry .timeline-entry-inner .timeline-icon, .avatar {
+        margin-top: 0px;
         border-radius: 3px;
         box-shadow: none;
     }
