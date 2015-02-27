@@ -98,6 +98,7 @@
     .page-title .creator {
         position: relative;
         display: block;
+        width: 80%;
         left: 31px;
         font-size: 0px;
     }
