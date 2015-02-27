@@ -77,7 +77,7 @@
         margin-right: calc(25% + 8px);
     }
 
-    .issue-details > .issue-title + div {
+    .issue-details > .issue-title + div, .merge-request-details > .issue-title + div {
         margin-bottom: 15px;
         margin-left: 70px;
         margin-right: calc(25% + 8px);
@@ -147,7 +147,7 @@
         margin-top: 0px;
     }
 
-    .timeline .timeline-entry .timeline-entry-inner .timeline-content:before, .issue-details > .issue-title + div:before {
+    .timeline .timeline-entry .timeline-entry-inner .timeline-content:before, .issue-details > .issue-title + div:before, .merge-request-details > .issue-title + div:before {
         content: "";
         position: absolute;
         width: 12px;
@@ -159,7 +159,7 @@
         transform: rotate(45deg)
     }
 
-    .issue-details > .issue-title + div:before {
+    .issue-details > .issue-title + div:before, .merge-request-details > .issue-title + div:before {
         margin-top: -38px;
         margin-left: -22px;
     }
