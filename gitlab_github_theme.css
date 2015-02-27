@@ -91,6 +91,10 @@
         height: 45px;
     }
 
+    .page-title .pull-right {
+        margin-top: -45px;
+    }
+
     .page-title .creator {
         position: relative;
         display: block;
