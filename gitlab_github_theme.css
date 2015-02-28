@@ -261,20 +261,21 @@
     /* markdown */
 
     .wiki code, .note-text code {
-        font-size: 14px !important;
         color: #333;
         background-color: rgba(0, 0, 0, 0.04);
         border-radius: 3px;
+        font-size: 14px !important;
     }
 
-    .highlight {
+    pre {
         padding: 16px;
         background-color: #f7f7f7;
+        border-color: transparent !important;
         border-radius: 3px;
     }
 
-    .highlight code {
-        background-color: inherit;
+    pre code {
+        background-color: inherit !important;
     }
 
     .wiki .task-list-item {
