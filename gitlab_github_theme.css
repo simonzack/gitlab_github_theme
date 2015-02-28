@@ -273,8 +273,8 @@
         border-radius: 3px;
     }
 
-    .highlighted-data pre, .highlighted-data pre code {
-        background-color: inherit !important;
+    .highlight code {
+        background-color: inherit;
     }
 
     .wiki .task-list-item {
