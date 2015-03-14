@@ -1,4 +1,3 @@
-
 @-moz-document domain(gitlab.arch), domain(gitlab.com) {
     /* colors from github */
 
@@ -148,7 +147,7 @@
         margin-top: 0px;
     }
 
-    .timeline .timeline-entry .timeline-entry-inner .timeline-content:before, .issue-details > .issue-title + div:before, .merge-request-details > .issue-title + div:before {
+    .timeline .note:not(.system-note) .timeline-entry-inner .timeline-content:before, .issue-details > .issue-title + div:before, .merge-request-details > .issue-title + div:before {
         content: "";
         position: absolute;
         width: 12px;
@@ -165,16 +164,20 @@
         margin-left: -22px;
     }
 
-    .timeline .timeline-entry .timeline-entry-inner .timeline-content:before {
+    .timeline .note .timeline-entry-inner .timeline-content {
+        padding: 0px 0px;
+    }
+
+    .timeline .note .timeline-entry-inner .timeline-content:before {
         margin-top: 14px;
         margin-left: -6px;
     }
 
-    .timeline .timeline-entry .timeline-entry-inner .timeline-content:after {
+    .timeline .note .timeline-entry-inner .timeline-content:after {
         display: none;
     }
 
-    .timeline .timeline-entry .timeline-entry-inner .timeline-icon, .avatar {
+    .timeline .note .timeline-entry-inner .timeline-icon, .avatar {
         margin-top: 0px;
         border-radius: 3px;
         box-shadow: none;
@@ -196,10 +199,6 @@
     }
 
     /* issue comments */
-
-    .timeline .timeline-entry .timeline-entry-inner .timeline-content {
-        padding: 0px 0px;
-    }
 
     ul.notes .note:not(.system-note) .note-header, ul.notes .note:not(.system-note) .note-body {
         border: 1px solid #ddd;
