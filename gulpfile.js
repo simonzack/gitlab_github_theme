@@ -19,6 +19,9 @@ function build(){
         }, {
           test: /\.css$/,
           loader: 'css?minimize'
+        }, {
+          test: /\.jade$/,
+          loader: 'jade'
         }]
       },
       watch: true,

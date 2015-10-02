@@ -9,6 +9,8 @@
     "gulp": "^3.9.0",
     "gulp-add-src": "^0.2.0",
     "gulp-continuous-concat": "^0.1.1",
+    "jade": "^1.11.0",
+    "jade-loader": "^0.7.1",
     "webpack": "^1.12.2",
     "webpack-stream": "^2.1.1"
   }

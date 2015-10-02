@@ -1,0 +1,24 @@
+li#note_first.note.timeline-entry
+  .timeline-entry-inner
+    .timeline-icon
+      a(href=authorLink)
+        img.avatar.s40(alt='', src=authorAvatar + '?s=40&d=identicon')
+    .timeline-content
+      .note-header
+        a.author_link(href=authorLink)
+          span.author=authorName
+        | &nbsp;
+        span.author-username=authorUsername
+        | &nbsp;
+        span.note-last-update
+          | &nbsp;
+          a(href='#note_first', name='note_first', title='Link here')
+            time.note_created_ago.js-timeago()&attributes(createdAttrs)=createdText
+          span
+            | &nbsp;&middot;&nbsp;
+            i.fa.fa-edit(title='edited')
+            | &nbsp;
+            time.note_edited_ago.js-timeago()&attributes(editedAttrs)=editedText
+      .js-task-list-container.note-body.is-task-list-enabled
+        .note-text!=noteText
+      .clear
