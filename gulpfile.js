@@ -1,4 +1,4 @@
-/*jshint -W079*/
+/* global require */
 var FirefoxProfile = require('firefox-profile');
 var gulp = require('gulp');
 var addsrc = require('gulp-add-src');
@@ -15,7 +15,8 @@ function build(){
         loaders: [{
           test: /\.js$/,
           exclude: /[\\/]node_modules[\\/]/,
-          loader: 'babel?blacklist[]=es6.forOf&blacklist[]=es6.arrowFunctions&blacklist[]=es6.blockScoping&blacklist[]=regenerator'
+          loader: 'babel?' +
+            'blacklist[]=es6.forOf&blacklist[]=es6.arrowFunctions&blacklist[]=es6.blockScoping&blacklist[]=regenerator'
         }, {
           test: /\.css$/,
           loader: 'css?minimize'

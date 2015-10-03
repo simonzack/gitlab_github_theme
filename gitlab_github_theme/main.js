@@ -28,17 +28,12 @@ function moveFirstPost(){
 
 function moveTitle(){
   $('.issue-title').prependTo('.page-title');
-  $('.page-title ~ *:not(:last-child)').remove();
+  $('.page-title + *').remove();
 }
 
 function moveIssueNum(){
-  let issueNum;
-  for(let node of $('.page-title').get(0).childNodes){
-    if(node.nodeType == Node.TEXT_NODE && node.data.includes('Issue')){
-      issueNum = node.data.match(/\d+/);
-      node.parentNode.removeChild(node);
-    }
-  }
+  let issueNum = $('.issue-id').text().match(/\d+/);
+  $('.issue-id').remove();
   for(let node of $('.creator').get(0).childNodes){
     if(node.nodeType == Node.TEXT_NODE)
       node.data = node.data.replace('·', '');
@@ -46,8 +41,10 @@ function moveIssueNum(){
   $(`<span class="header-number">#${issueNum}</span>`).appendTo('.issue-title');
 }
 
-function moveParticipants(){
-  $('<div class="prepend-top-20 clearfix"></div>').append($('.participants')).appendTo('.issuable-context-form');
+function moveRightColumn(){
+  $('.issuable-context-form')
+    .prepend($('<div class="prepend-top-20 clearfix"></div>').append($('span[title="Cross-project reference"]')))
+    .append($('<div class="prepend-top-20 clearfix"></div>').append($('.participants')));
 }
 
 function main(){
@@ -55,7 +52,7 @@ function main(){
   moveFirstPost();
   moveTitle();
   moveIssueNum();
-  moveParticipants();
+  moveRightColumn();
 }
 
 main();
