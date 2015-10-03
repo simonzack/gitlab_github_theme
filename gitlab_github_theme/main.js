@@ -47,14 +47,19 @@ function moveRightColumn(){
     .append($('<div class="prepend-top-20 clearfix"></div>').append($('.participants')));
 }
 
+function fixIssue(){
+  moveFirstPost();
+  moveTitle();
+  moveIssueNum();
+  moveRightColumn();
+}
+
 function main(){
   GM_addStyle(styleCSS.toString());
-  if(/issues\/\d+$/.test(document.location.href)){
-    moveFirstPost();
-    moveTitle();
-    moveIssueNum();
-    moveRightColumn();
-  }
+  // gitlab uses turbolinks for in-place page loads
+  document.addEventListener('page:load', fixIssue, false);
+  if(/issues\/\d+$/.test(document.location.href))
+    fixIssue();
 }
 
 main();
