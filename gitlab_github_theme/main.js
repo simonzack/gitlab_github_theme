@@ -13,17 +13,27 @@ function pairsToObj(attrs){
 
 function moveFirstPost(){
   let issueDetails = $('.issue-details');
-  $(nodeTemplate({
+  let templateVars = {
     'authorLink': issueDetails.find('.author_link').attr('href'),
     'authorAvatar': issueDetails.find('.avatar').attr('src').match(/^.+\/avatar\/[\da-f]+/),
     'authorName': issueDetails.find('.author').text(),
     'authorUsername': '@' + issueDetails.find('.author_link').attr('href').match(/[^/]+$/),
     'noteText': issueDetails.find('.wiki').html(),
-    'createdAttrs': pairsToObj(issueDetails.find('.issue_created_ago').get(0).attributes),
-    'createdText': issueDetails.find('.issue_created_ago').text(),
-    'editedAttrs': pairsToObj(issueDetails.find('.issue_edited_ago').get(0).attributes),
-    'editedText': issueDetails.find('.issue_edited_ago').text(),
-  })).prependTo('#notes-list');
+  };
+  let created = issueDetails.find('.issue_created_ago');
+  Object.assign(templateVars, {
+    'createdAttrs': pairsToObj(created.get(0).attributes),
+    'createdText': created.text(),
+  });
+  let edited = issueDetails.find('.issue_edited_ago');
+  templateVars.edited = edited.length > 0;
+  if(edited.length > 0){
+    Object.assign(templateVars, {
+      'editedAttrs': pairsToObj(issueDetails.find('.issue_edited_ago').get(0).attributes),
+      'editedText': issueDetails.find('.issue_edited_ago').text(),
+    });
+  }
+  $(nodeTemplate(templateVars)).prependTo('#notes-list');
 }
 
 function moveTitle(){
