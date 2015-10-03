@@ -33,30 +33,29 @@ body[data-page="projects:issues:show"]
   position: static !important
 
 // title area
-.issue-title
-  padding-bottom: 8px
-  .header-number
-    color: #AAA
-
-.issue-box
-  border-radius: 3px
-  padding: 4px 8px
-  font-weight: bold
-  font-size: 14px
-  line-height: 20px
-  &:before
-    font-family: FontAwesome
-  &.issue-box-open:before
-    content: "\f06a"
-  &.issue-box-closed:before
-    content: "\f058"
-  &.issue-box-open
-    background-color: #6CC644
-  &.issue-box-closed
-    background-color: #BD2C00
-
-.page-title > .pull-right
-  margin-top: -6px
+.issue-details
+  .issue-title
+    padding-bottom: 8px
+    .header-number
+      color: #AAA
+  .issue-box
+    border-radius: 3px
+    padding: 4px 8px
+    font-weight: bold
+    font-size: 14px
+    line-height: 20px
+    &:before
+      font-family: FontAwesome
+    &.issue-box-open:before
+      content: "\f06a"
+    &.issue-box-closed:before
+      content: "\f058"
+    &.issue-box-open
+      background-color: #6CC644
+    &.issue-box-closed
+      background-color: #BD2C00
+  .pull-right
+    margin-top: -3px
 
 .issue-discussion > .gray-content-block
   display: none
@@ -66,20 +65,21 @@ ul.notes
   border-top: 2px solid #F3F3F3
   border-bottom: 2px solid #F3F3F3
   margin: 10px 0
-  .note
-    &:before
-      display: block
-      content: ""
-      position: absolute
-      top: 0
-      bottom: 0
-      width: 2px
-      background-color: #F3F3F3
-      z-index: -1
-    &:not(.system-note):before
-      left: 79px
+  // timeline
+  .note:before
+    display: block
+    content: ""
+    position: absolute
+    top: 0
+    bottom: 0
+    width: 2px
+    background-color: #F3F3F3
+    z-index: -1
+  .note:not(.system-note):before
+    left: 79px
   .system-note:before
     left: 15px
+  // wedge
   .note:not(.system-note) .timeline-content:before
     content: ""
     width: 12px
@@ -92,6 +92,7 @@ ul.notes
     position: absolute
     margin-top: 14px
     margin-left: -6px
+  // circle
   .system-note
     margin-left: 48px
     padding-left: 33px !important
@@ -115,23 +116,23 @@ ul.notes
 ul.notes
   .note
     border: none
+  .note:not(.system-note)
     padding: 9px
-    &:not(.system-note)
-      .note-header, .note-body
-        border: 1px solid #DDD
-      .note-header
-        padding: 8px 10px
-        background-color: #F7F7F7
-        border-top-left-radius: 3px
-        border-top-right-radius: 3px
-        border-bottom: none
-        overflow: auto
-      .note-body
-        padding: 10px
-        background-color: white
-        border-bottom-left-radius: 3px
-        border-bottom-right-radius: 3px
-        border-top: none
+    .note-header, .note-body
+      border: 1px solid #DDD
+    .note-header
+      padding: 8px 10px
+      background-color: #F7F7F7
+      border-top-left-radius: 3px
+      border-top-right-radius: 3px
+      border-bottom: none
+      overflow: auto
+    .note-body
+      padding: 10px
+      background-color: #FFF
+      border-bottom-left-radius: 3px
+      border-bottom-right-radius: 3px
+      border-top: none
     .note-actions
       margin-top: 1px
       i
@@ -140,13 +141,11 @@ ul.notes
     background: none
 
 // edit boxes
-.issue-form-hold.issue-form-holder label.control-label
+.issue-form-holder label.control-label
   width: 120px
 
 .new_note
-  margin-top: 18px
-  margin-left: 50px
-  margin-right: -5px
+  margin: 18px -5px 0 50px
   padding: 0
   border: 1px solid #DDD
   background: #FFF
@@ -156,21 +155,21 @@ ul.notes
     padding: 6px 10px 0
     border-radius: 3px 3px 0 0
     border-bottom: 1px solid #DDD
-  .center-top-menu
-    padding: 0
-    height: 35px
-    li
-      padding: 4px 12px
-      &.active
-        background-color: #FFF
-        border-color: #DDD
-        border-radius: 3px 3px 0 0
-        border-width: 1px 1px 0
-        border-style: solid solid none
-      a, &.active a
-        border: none
-        padding: 0
-        outline: none
+    .center-top-menu
+      padding: 0
+      height: 35px
+      li
+        padding: 4px 12px
+        &.active
+          background-color: #FFF
+          border-color: #DDD
+          border-radius: 3px 3px 0 0
+          border-width: 1px 1px 0
+          border-style: solid solid none
+        a, &.active a
+          border: none
+          padding: 0
+          outline: none
   .md-write-holder
     padding: 10px 0
     margin: 0 10px
@@ -185,31 +184,29 @@ ul.notes
       padding: 10px 10px 5px
       border: 1px solid #CCC
       border-radius: 0 0 3px 3px
-  .note-form-actions
-    padding: 0 10px 10px 10px
-    background-color: #FFF
   .md-preview-holder
     padding: 10px
     // keep aligned with write
     margin-bottom: 29px
     border: none
+  .note-form-actions
+    padding: 0 10px 10px 10px
+    background-color: #FFF
 
 // markdown
-.wiki code, .note-text code
-  color: #333
-  background-color: rgba(0, 0, 0, 0.04)
-  border-radius: 3px
-  font-size: 14px !important
-
-pre
-  padding: 16px
-  background-color: #F7F7F7
-  border-color: transparent !important
-  border-radius: 3px
+.note-text
   code
-    background-color: inherit !important
-
-.wiki
+    color: #333
+    background-color: rgba(0, 0, 0, 0.04)
+    border-radius: 3px
+    font-size: 14px !important
+  pre
+    padding: 16px
+    background-color: #F7F7F7 !important
+    border-color: transparent !important
+    border-radius: 3px
+    code
+      background-color: inherit !important
   .task-list-item
     margin-left: -1em
     input[type="checkbox"]
@@ -218,19 +215,9 @@ pre
   ul
     margin: 0 0 9px 0 !important
     padding-left: 2em
-
-.note-text ul
-  margin: 0 0 9px 0 !important
-  padding-left: 2em
-
-.wiki ul ul, .note-text ul ul
-  margin-bottom: 0
-
-.wiki ul, .note-text ul
-  list-style: disc
-
-.wiki ul ul, .note-text ul ul
-  list-style: circle
-
-.wiki ul ul ul, .note-text ul ul ul
-  list-style: square
+    list-style: disc
+    ul
+      margin-bottom: 0
+      list-style: circle
+      ul
+        list-style: square
