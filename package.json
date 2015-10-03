@@ -11,6 +11,8 @@
     "gulp-continuous-concat": "^0.1.1",
     "jade": "^1.11.0",
     "jade-loader": "^0.7.1",
+    "node-sass": "^3.3.3",
+    "sass-loader": "^3.0.0",
     "webpack": "^1.12.2",
     "webpack-stream": "^2.1.1"
   }

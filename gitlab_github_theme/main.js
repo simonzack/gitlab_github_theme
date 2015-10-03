@@ -1,5 +1,5 @@
-/* globals GM_addStyle, unsafeWindow, Node */
-import styleCSS from 'gitlab_github_theme/style.css';
+/* globals GM_addStyle, document, unsafeWindow, Node */
+import styleCSS from 'gitlab_github_theme/style.sass';
 import nodeTemplate from 'gitlab_github_theme/note.jade';
 
 let $ = unsafeWindow.$;
@@ -49,10 +49,12 @@ function moveRightColumn(){
 
 function main(){
   GM_addStyle(styleCSS.toString());
-  moveFirstPost();
-  moveTitle();
-  moveIssueNum();
-  moveRightColumn();
+  if(/issues\/\d+$/.test(document.location.href)){
+    moveFirstPost();
+    moveTitle();
+    moveIssueNum();
+    moveRightColumn();
+  }
 }
 
 main();

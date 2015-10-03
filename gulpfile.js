@@ -18,8 +18,8 @@ function build(){
           loader: 'babel?' +
             'blacklist[]=es6.forOf&blacklist[]=es6.arrowFunctions&blacklist[]=es6.blockScoping&blacklist[]=regenerator'
         }, {
-          test: /\.css$/,
-          loader: 'css?minimize'
+          test: /\.sass$/,
+          loaders: ['css?minimize', 'sass?indentedSyntax']
         }, {
           test: /\.jade$/,
           loader: 'jade'
