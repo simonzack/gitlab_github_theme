@@ -29,8 +29,8 @@ body[data-page="projects:issues:show"]
     padding-top: 0
 
 // right bar
-.issuable-affix
-  position: static !important
+.issuable-affix.affix, .issuable-affix.affix-top
+  position: static
 
 // title area
 .issue-details
@@ -95,7 +95,7 @@ ul.notes
   // circle
   .system-note
     margin-left: 48px
-    padding-left: 33px !important
+    padding-left: 33px
     .timeline-content:before
       content: "\f111"
       font-family: FontAwesome
@@ -146,10 +146,14 @@ ul.notes
 
 .new_note
   margin: 18px -5px 0 50px
-  padding: 0
+
+.new_note, ul.notes .note .note-header[style='display: none;'] + .note-body
+  padding: 0 0 10px 0
   border: 1px solid #DDD
-  background: #FFF
   border-radius: 3px
+  background: #FFF
+
+.edit_note, .new_note
   .md-header
     background: #F7F7F7
     padding: 6px 10px 0
