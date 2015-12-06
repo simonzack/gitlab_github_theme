@@ -5,6 +5,8 @@ body
 
 .btn
   padding: 6px 10px
+  font-weight: normal
+  text-transform: none
 
 .avatar
   border-radius: 3px
@@ -56,6 +58,9 @@ body[data-page="projects:issues:show"], body[data-page="projects:merge_requests:
       background-color: #BD2C00
   .pull-right
     margin-top: -3px
+
+.page-title
+  font-weight: normal
 
 .issue-discussion > .gray-content-block
   display: none
@@ -160,6 +165,7 @@ ul.notes
     border-radius: 3px 3px 0 0
     border-bottom: 1px solid #DDD
     .center-top-menu
+      margin: 0
       padding: 0
       height: 35px
       li
@@ -198,7 +204,7 @@ ul.notes
     background-color: #FFF
 
 // markdown
-.note-text
+ul.notes .note .note-body .note-text
   code
     color: #333
     background-color: rgba(0, 0, 0, 0.04)
