@@ -35,41 +35,36 @@ body[data-page="projects:issues:show"], body[data-page="projects:merge_requests:
   position: static
 
 // title area
-.issue-details
-  .issue-title
-    padding-bottom: 8px
+.issue
+  >.title
     .header-number
       color: #AAA
-  .issue-box
-    border-radius: 3px
-    padding: 4px 8px
-    font-weight: bold
-    font-size: 14px
-    line-height: 20px
-    &:before
-      font-family: FontAwesome
-    &.issue-box-open:before
-      content: "\f06a"
-    &.issue-box-closed:before
-      content: "\f058"
-    &.issue-box-open
-      background-color: #6CC644
-    &.issue-box-closed
-      background-color: #BD2C00
-  .pull-right
-    margin-top: -3px
-
-.page-title
-  font-weight: normal
-
-.issue-discussion > .gray-content-block
-  display: none
+  .detail-page-header
+    border-bottom: none
+    .status-box
+      border-radius: 3px
+      padding: 7px 8px
+      font-weight: bold
+      font-size: 14px
+      line-height: 20px
+      &:before
+        font-family: FontAwesome
+      &.status-box-open:before
+        content: "\f06a "
+      &.status-box-closed:before
+        content: "\f058 "
+      &.status-box-open
+        background-color: #6CC644
+      &.status-box-closed
+        background-color: #BD2C00
 
 // issue comments timeline
 ul.notes
   border-top: 2px solid #F3F3F3
   border-bottom: 2px solid #F3F3F3
   margin: 10px 0
+  .note:last-child
+    border-bottom: none
   // timeline
   .note:before
     display: block
@@ -99,7 +94,7 @@ ul.notes
     margin-left: -6px
   // circle
   .system-note
-    margin-left: 48px
+    margin-left: 64px
     padding-left: 33px
     .timeline-content:before
       content: "\f111"
@@ -159,12 +154,13 @@ ul.notes
   background: #FFF
 
 .edit_note, .new_note
+  margin: 18px 8px 0 64px
   .md-header
     background: #F7F7F7
     padding: 6px 10px 0
     border-radius: 3px 3px 0 0
     border-bottom: 1px solid #DDD
-    .center-top-menu
+    .nav-links
       margin: 0
       padding: 0
       height: 35px
@@ -183,6 +179,9 @@ ul.notes
   .md-write-holder
     padding: 10px 0
     margin: 0 10px
+    .js-zen-enter
+      right: 16px
+      line-height: 40px
     .note_text
       max-height: 500px
       padding: 10px
